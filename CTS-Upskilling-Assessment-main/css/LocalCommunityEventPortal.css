@@ -1,0 +1,347 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   BODY STYLES
+========================= */
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f8fafc;
+    color: #374151;
+    line-height: 1.6;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    padding: 18px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #fde68a;
+    transform: translateY(-3px);
+}
+
+nav a:visited {
+    color: white;
+}
+
+nav a:active {
+    color: #fca5a5;
+}
+
+/* =========================
+   SECTION
+========================= */
+
+section {
+    padding: 50px 8%;
+}
+
+/* =========================
+   WELCOME BANNER
+========================= */
+
+#welcomeBanner {
+    background: linear-gradient(135deg, #14b8a6, #0f766e);
+    color: white;
+    text-align: center;
+    padding: 30px;
+    border-radius: 15px;
+    font-size: 30px;
+    font-weight: bold;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    margin: 20px 0;
+}
+
+/* =========================
+   HEADINGS
+========================= */
+
+h2 {
+    text-align: center;
+    color: #4338ca;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* =========================
+   EVENT CARDS
+========================= */
+
+.eventCard {
+    background: white;
+    border-left: 6px solid #14b8a6;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.eventCard:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(20,184,166,0.25);
+}
+
+.eventCard h3 {
+    color: #4f46e5;
+    margin-bottom: 10px;
+}
+
+.eventCard p {
+    color: #6b7280;
+}
+
+/* =========================
+   GALLERY
+========================= */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 20px;
+    text-align: center;
+}
+
+.gallery-img {
+    width: 260px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 5px solid #14b8a6;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.gallery-img:hover {
+    transform: scale(1.08);
+    border-color: #7c3aed;
+}
+
+table tr:nth-child(even) {
+    background: #f1f5f9;
+}
+
+td p {
+    margin-top: 10px;
+    color: #4338ca;
+    font-weight: bold;
+}
+
+/* =========================
+   FORM
+========================= */
+
+form {
+    max-width: 700px;
+    margin: auto;
+    background: white;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 14px;
+    margin: 12px 0;
+    border: 2px solid #cbd5e1;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #14b8a6;
+    outline: none;
+    box-shadow: 0 0 8px rgba(20,184,166,0.3);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+button {
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 10px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #14b8a6, #0f766e);
+    transform: scale(1.03);
+}
+
+/* =========================
+   OUTPUT TEXT
+========================= */
+
+#feeDisplay,
+#charCount,
+#outputMessage,
+#videoStatus,
+#location {
+    margin-top: 12px;
+    font-weight: bold;
+    color: #4f46e5;
+}
+
+/* =========================
+   VIDEO
+========================= */
+
+video {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* =========================
+   CONTACT SECTION
+========================= */
+
+#contact {
+    background: #eef2ff;
+    border-radius: 15px;
+}
+
+#contact p {
+    text-align: center;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: linear-gradient(135deg, #312e81, #4338ca);
+    color: white;
+    text-align: center;
+    padding: 30px;
+    margin-top: 40px;
+}
+
+footer button {
+    margin-top: 15px;
+    background: #14b8a6;
+}
+
+footer button:hover {
+    background: #0f766e;
+}
+
+/* =========================
+   NEWS SECTION
+========================= */
+
+.news-section {
+    column-count: 2;
+    column-gap: 30px;
+    column-rule: 2px solid #d1d5db;
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #7c3aed;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #e5e7eb;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width:768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #welcomeBanner {
+        font-size: 22px;
+    }
+
+    .gallery-img {
+        width: 100%;
+        height: auto;
+    }
+
+    form {
+        width: 100%;
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    body {
+        font-size: 15px;
+    }
+
+    .news-section {
+        column-count: 1;
+    }
+}
+

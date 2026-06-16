@@ -1,0 +1,266 @@
+Program 1 Output
+
+Hello World!
+
+
+Program 2 Output
+
+
+Before: 10
+After: 10
+
+Before: David
+After: John
+
+
+Program 3 Output
+
+
+Name: Alice
+Age: 25
+
+
+Program 4 Output
+
+
+System.Int32
+System.String
+Student
+
+10
+Hello
+John
+
+
+Program 5 Output
+
+
+Enter Score: 85
+
+Grade B
+Switch Grade: B
+
+
+Program 6 Output
+
+
+For Loop
+10
+20
+30
+40
+50
+
+Foreach Loop
+10
+20
+30
+40
+50
+
+While Loop
+10
+20
+30
+40
+50
+
+Do While Loop
+10
+20
+30
+40
+50
+
+
+Program 7 Output
+
+
+30
+61.5
+
+
+Program 8 Output
+
+
+11
+100
+11
+
+
+Program 9 Output
+
+
+120
+
+
+Program 10 Output
+
+
+Unknown Unknown 0
+Toyota Camry 2024
+
+
+Program 11 Output
+
+
+Public Member
+Private Member
+Public Member
+Protected Member
+
+
+Program 12 Output
+
+
+Laptop - 50000
+Price cannot be negative
+
+
+Program 13 Output
+
+
+Employee { Id = 1, Name = John, Department = IT }
+Employee { Id = 1, Name = David, Department = IT }
+
+
+Program 14 Output
+
+
+Drawing Circle
+Drawing Rectangle
+
+
+Program 15 Output
+
+
+Car is Driving
+Car Started
+
+
+Program 16 Output
+
+
+No Name
+Name Missing
+
+
+Program 17 Output
+
+
+Contact Not Found
+John
+
+
+Program 18 Output
+
+
+Alice - 101
+
+
+Program 19 Output
+
+
+List Items
+Apple
+Mango
+Orange
+
+Dictionary Items
+1 John
+3 Alice
+
+
+Program 20 Output
+
+
+2 David
+3 Alice
+
+
+Program 21 Output
+
+
+Integer: 10
+Square: 100
+
+String: Hello
+Length: 5
+
+
+Program 22 Output
+
+
+ID: 101
+Name: John
+
+
+Program 23 Output
+
+
+File Uploaded Successfully
+
+
+Program 24 Output
+
+
+John
+25
+john@gmail.com
+
+
+Program 25 Output
+
+
+Hello FileStream
+Bytes Written: 18
+
+
+Program 26 Output
+
+
+Counter = 20000
+
+
+Program 27 Output
+
+
+Task1 acquired Lock1
+
+
+
+
+Program 28 Output
+
+
+Log Written
+log.txt
+Application Started
+Application Ended
+
+
+
+
+Program 29 Output
+
+Input
+
+<script>alert('XSS')</script>
+
+Output
+
+Enter Input: <script>alert('XSS')</script>
+Sanitized Output:
+&lt;script&gt;alert('XSS')&lt;/script&gt;
+
+
+
+
+Program 30 Output
+
+
+Record Inserted
+
+1 John 50000
+Record Updated
+Record Deleted
