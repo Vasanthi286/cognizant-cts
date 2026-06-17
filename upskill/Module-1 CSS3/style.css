@@ -1,0 +1,173 @@
+/* ==================================
+   Universal Selector
+================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==================================
+   Body Styles
+================================== */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url("https://images.unsplash.com/photo-1506744038136-46273834b3fb");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(240,240,240,0.9);
+    padding: 20px;
+}
+
+/* ==================================
+   Header Styles
+================================== */
+#mainHeader {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+/* ==================================
+   Navigation Styles
+================================== */
+.navMenu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.navMenu li {
+    margin: 10px;
+    padding: 10px;
+}
+
+/* Link Styling */
+a:link {
+    color: blue;
+}
+
+a:hover {
+    color: red;
+}
+
+a:active {
+    color: green;
+}
+
+a:visited {
+    color: purple;
+}
+
+/* ==================================
+   Section Header
+================================== */
+.sectionHeader {
+    background: linear-gradient(to right, #007BFF, #00C6FF);
+    color: white;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+/* ==================================
+   Element Selector
+================================== */
+h2 {
+    color: darkblue;
+    margin-bottom: 10px;
+}
+
+/* ==================================
+   Grouping Selector
+================================== */
+h3, p {
+    color: #333;
+    line-height: 1.8;
+}
+
+/* ==================================
+   Event Card Styles
+================================== */
+.eventCard {
+    background-color: rgba(173,216,230,0.5);
+    border: 2px solid #333;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+/* ==================================
+   Form Outline
+================================== */
+input:focus {
+    outline: 3px solid orange;
+}
+
+/* ==================================
+   Table Styling
+================================== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th {
+    background-color: #007BFF;
+    color: white;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* ==================================
+   Multi Column Layout
+================================== */
+.news p {
+    column-count: 2;
+    column-gap: 30px;
+    column-rule: 1px solid gray;
+    margin-top: 20px;
+}
+
+/* ==================================
+   Visibility Example
+================================== */
+.hidden {
+    visibility: hidden;
+}
+
+.none {
+    display: none;
+}
+
+/* ==================================
+   Responsive Design
+================================== */
+@media screen and (max-width: 768px) {
+
+    .navMenu {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    img {
+        width: 80%;
+    }
+
+    body {
+        padding: 5vw;
+    }
+}
