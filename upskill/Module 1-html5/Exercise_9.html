@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Nearby Events</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border: 2px solid #007BFF;
+            border-radius: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #location {
+            margin-top: 20px;
+            font-weight: bold;
+            color: green;
+        }
+    </style>
+
+    <script>
+        function findLocation() {
+
+            if (!navigator.geolocation) {
+                document.getElementById("location").innerHTML =
+                    "Geolocation is not supported by your browser.";
+                return;
+            }
+
+            var options = {
+                enableHighAccuracy: true,
+                timeout: 10000,
+                maximumAge: 0
+            };
+
+            navigator.geolocation.getCurrentPosition(
+                showPosition,
+                showError,
+                options
+            );
+        }
+
+        function showPosition(position) {
+            document.getElementById("location").innerHTML =
+                "Latitude: " + position.coords.latitude +
+                "<br>Longitude: " + position.coords.longitude;
+        }
+
+        function showError(error) {
+            switch (error.code) {
+
+                case error.PERMISSION_DENIED:
+                    document.getElementById("location").innerHTML =
+                        "Location access denied by user.";
+                    break;
+
+                case error.POSITION_UNAVAILABLE:
+                    document.getElementById("location").innerHTML =
+                        "Location information unavailable.";
+                    break;
+
+                case error.TIMEOUT:
+                    document.getElementById("location").innerHTML =
+                        "Location request timed out.";
+                    break;
+
+                default:
+                    document.getElementById("location").innerHTML =
+                        "An unknown error occurred.";
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2>Nearby Event Locator</h2>
+
+        <button onclick="findLocation()">
+            Find Nearby Events
+        </button>
+
+        <p id="location"></p>
+
+    </div>
+
+</body>
+</html>
