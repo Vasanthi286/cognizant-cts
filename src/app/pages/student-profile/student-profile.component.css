@@ -1,0 +1,243 @@
+/* Student Profile Styles */
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.profile-layout {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 28px;
+}
+
+@media (max-width: 900px) {
+  .profile-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Left Column Card */
+.student-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  height: fit-content;
+  border-top: 4px solid var(--accent-cyan);
+}
+
+.avatar-container {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: var(--glow-cyan);
+  border: 2px solid var(--accent-cyan);
+}
+
+.avatar-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.student-details {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+
+.student-name {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.student-id {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+}
+
+.details-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+  text-align: left;
+  border-top: var(--border-glass);
+  padding-top: 16px;
+}
+
+.details-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.details-label {
+  color: var(--text-secondary);
+}
+
+.details-value {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+/* Right Column Main area */
+.registration-main {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.stats-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-left: 4px solid var(--accent-cyan);
+  padding: 16px 20px;
+}
+
+.border-purple {
+  border-left-color: var(--accent-purple);
+}
+
+.stat-label {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  letter-spacing: 0.05em;
+}
+
+.stat-num {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--accent-cyan);
+  text-shadow: var(--glow-cyan);
+}
+
+.color-purple {
+  color: var(--accent-purple);
+  text-shadow: var(--glow-purple);
+}
+
+/* Enrolled Courses Registry Card */
+.enrolled-courses-card {
+  padding: 24px;
+}
+
+.courses-card-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+  border-bottom: var(--border-glass);
+  padding-bottom: 12px;
+}
+
+.empty-enrolled {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+  gap: 16px;
+  text-align: center;
+}
+
+.empty-msg {
+  color: var(--text-secondary);
+}
+
+/* Table styling */
+.courses-table-container {
+  overflow-x: auto;
+}
+
+.courses-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.courses-table th {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 12px 16px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.05);
+}
+
+.courses-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 0.9rem;
+}
+
+.col-code {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--accent-cyan);
+}
+
+.col-title {
+  font-weight: 500;
+}
+
+.course-link {
+  color: var(--text-primary);
+  transition: var(--transition-smooth);
+}
+
+.course-link:hover {
+  color: var(--accent-cyan);
+  text-shadow: var(--glow-cyan);
+}
+
+.col-credits {
+  color: var(--text-secondary);
+}
+
+.col-actions {
+  text-align: right;
+}
+
+.actions-header {
+  text-align: right;
+}
+
+.btn-unenroll {
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--color-danger);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.btn-unenroll:hover {
+  background: var(--color-danger);
+  color: #fff;
+  box-shadow: 0 0 12px rgba(239, 68, 68, 0.4);
+}

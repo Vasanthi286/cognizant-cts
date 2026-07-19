@@ -1,0 +1,248 @@
+/* Dashboard Home Styles */
+
+.dashboard-container {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 28px;
+}
+
+@media (max-width: 992px) {
+  .dashboard-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.dashboard-main {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* Welcome Card style */
+.welcome-card {
+  display: grid;
+  grid-template-columns: 1fr 120px;
+  gap: 20px;
+  align-items: center;
+  border-left: 4px solid var(--accent-cyan);
+  background: linear-gradient(135deg, rgba(26, 32, 49, 0.7) 40%, rgba(0, 242, 254, 0.05) 100%);
+}
+
+.welcome-tag {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--accent-cyan);
+  letter-spacing: 0.1em;
+}
+
+.welcome-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-top: 6px;
+  color: #fff;
+}
+
+.welcome-subtitle {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-top: 4px;
+}
+
+.dashboard-art {
+  width: 100px;
+  height: 100px;
+}
+
+/* Stats Row */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 600px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-left: 4px solid var(--accent-cyan);
+  padding: 16px 20px;
+}
+
+.border-purple {
+  border-left-color: var(--accent-purple);
+}
+
+.border-pink {
+  border-left-color: var(--accent-pink);
+}
+
+.stat-label {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  letter-spacing: 0.05em;
+}
+
+.stat-num {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--accent-cyan);
+  text-shadow: var(--glow-cyan);
+  line-height: 1.1;
+}
+
+.color-purple {
+  color: var(--accent-purple);
+  text-shadow: var(--glow-purple);
+}
+
+.color-pink {
+  color: var(--accent-pink);
+  text-shadow: 0 0 15px rgba(255, 0, 79, 0.4);
+}
+
+/* Quick action shortcuts */
+.shortcuts-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.section-heading {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.shortcuts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.shortcut-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.shortcut-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-cyan);
+}
+
+.shortcut-icon {
+  font-size: 2rem;
+  margin-bottom: 4px;
+}
+
+.shortcut-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.shortcut-desc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Sidebar styles */
+.dashboard-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.sidebar-notifications {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sidebar-notif-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: var(--border-glass);
+  padding-bottom: 8px;
+}
+
+.sidebar-notif-title {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.scoped-badge {
+  font-size: 0.7rem;
+  background: var(--bg-input);
+  color: var(--accent-pink);
+  border: 1px solid rgba(255, 0, 127, 0.2);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.sidebar-notif-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sidebar-notif-item {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.bullet-glow {
+  width: 6px;
+  height: 6px;
+  background-color: var(--accent-pink);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--accent-pink);
+  flex-shrink: 0;
+  margin-top: 7px;
+}
+
+.notif-text {
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+
+.btn-clear-sidebar {
+  background: transparent;
+  color: var(--text-secondary);
+  border: 1px solid var(--text-muted);
+  border-radius: 6px;
+  padding: 8px;
+  font-size: 0.8rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  transition: var(--transition-smooth);
+}
+
+.btn-clear-sidebar:hover {
+  border-color: var(--accent-pink);
+  color: var(--accent-pink);
+  background: rgba(255, 0, 127, 0.05);
+}

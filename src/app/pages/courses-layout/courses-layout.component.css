@@ -1,0 +1,20 @@
+.courses-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.layout-header-box {
+  border-bottom: var(--border-glass);
+  padding-bottom: 20px;
+}
+
+.layout-desc {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  margin-top: 4px;
+}
+
+.layout-body {
+  min-height: 400px;
+}

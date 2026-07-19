@@ -1,0 +1,33 @@
+/* Not Found Styles */
+
+.notfound-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+}
+
+.notfound-card {
+  max-width: 480px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  border-top: 4px solid var(--accent-pink);
+}
+
+.error-code-label {
+  font-family: var(--font-display);
+  font-size: 5rem;
+  font-weight: 800;
+  color: var(--accent-pink);
+  line-height: 1;
+  text-shadow: 0 0 20px rgba(255, 0, 127, 0.4);
+}
+
+.notfound-text {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  margin-bottom: 8px;
+}

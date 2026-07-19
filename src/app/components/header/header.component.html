@@ -1,0 +1,37 @@
+<header class="navbar-header">
+  <div class="nav-container">
+    <a routerLink="/" class="logo-link" id="nav-logo">
+      <span class="logo-accent">&lt;</span>StudentCoursePortal<span class="logo-accent">/&gt;</span>
+    </a>
+    
+    <nav class="navigation-bar">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-link" id="nav-home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/courses" routerLinkActive="active" class="nav-link" id="nav-courses">Courses</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/profile" routerLinkActive="active" class="nav-link" id="nav-profile">Profile</a>
+        </li>
+        <li class="nav-item" *ngIf="isLoggedIn$ | async as loggedIn">
+          <a routerLink="/enroll" routerLinkActive="active" class="nav-link" id="nav-enroll">Enroll Form</a>
+        </li>
+      </ul>
+    </nav>
+    
+    <div class="auth-action" *ngIf="isLoggedIn$ | async as loggedIn; else loggedOutTpl">
+      <button class="auth-btn logout-btn" (click)="toggleAuth(true)" id="btn-logout">
+        Logout
+      </button>
+    </div>
+    <ng-template #loggedOutTpl>
+      <div class="auth-action">
+        <button class="auth-btn login-btn" (click)="toggleAuth(false)" id="btn-login">
+          Login (Mock)
+        </button>
+      </div>
+    </ng-template>
+  </div>
+</header>

@@ -1,0 +1,146 @@
+/* Course Detail Styles */
+
+.detail-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.back-navigation {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.btn-back {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent-cyan);
+  transition: var(--transition-smooth);
+  display: inline-flex;
+  align-items: center;
+}
+
+.btn-back:hover {
+  color: #fff;
+  text-shadow: var(--glow-cyan);
+}
+
+.detail-card {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  border-left: 6px solid var(--accent-cyan);
+  padding: 32px;
+}
+
+.detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: var(--border-glass);
+  padding-bottom: 24px;
+}
+
+.header-main {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.course-code {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--accent-cyan);
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.course-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.course-credits {
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+
+.detail-body {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.detail-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 6px;
+}
+
+.section-content {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.section-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.syllabus-list {
+  padding-left: 20px;
+  list-style-type: decimal;
+}
+
+.syllabus-item {
+  line-height: 1.6;
+  padding-left: 4px;
+}
+
+.detail-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-top: var(--border-glass);
+  padding-top: 24px;
+  margin-top: 12px;
+}
+
+@media (max-width: 600px) {
+  .detail-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.detail-action-btn {
+  flex-shrink: 0;
+}
+
+.enroll-status-text {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.success-text {
+  color: var(--color-success);
+}

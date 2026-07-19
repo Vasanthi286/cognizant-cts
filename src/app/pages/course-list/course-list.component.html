@@ -1,0 +1,91 @@
+<div class="catalog-container">
+  <div class="catalog-main">
+    <!-- Filter Panel -->
+    <div class="filter-panel glass-card">
+      <div class="filter-group search-box">
+        <label class="form-label" for="search-input">Search Courses</label>
+        <input 
+          id="search-input"
+          type="text" 
+          class="form-control" 
+          placeholder="Search by code or name..." 
+          (input)="onSearch($event)">
+      </div>
+
+      <div class="filter-group">
+        <label class="form-label" for="status-filter">Grade Status</label>
+        <select id="status-filter" class="form-control" (change)="onStatusFilter($event)">
+          <option value="">All Statuses</option>
+          <option value="passed">Passed</option>
+          <option value="failed">Failed</option>
+          <option value="pending">Pending</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label class="form-label" for="credit-filter">Credits</label>
+        <select id="credit-filter" class="form-control" (change)="onCreditFilter($event)">
+          <option value="">All Credits</option>
+          <option value="2">2 Credits</option>
+          <option value="3">3 Credits</option>
+          <option value="4">4 Credits</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Scoped Notifications Display -->
+    <div class="notifications-panel glass-card" *ngIf="notifications.length > 0">
+      <div class="panel-header">
+        <h4 class="panel-title">Session Notifications (Scoped ID: #{{ notificationService.instanceId }})</h4>
+        <button class="btn-clear-notif" (click)="clearNotifications()">Clear</button>
+      </div>
+      <ul class="notification-list">
+        <li class="notification-item" *ngFor="let msg of notifications">
+          <span class="notification-icon">🗲</span> {{ msg }}
+        </li>
+      </ul>
+    </div>
+
+    <!-- Loading State -->
+    <div class="state-container" *ngIf="loading$ | async">
+      <div class="spinner"></div>
+      <p class="state-text">Loading curriculum courses...</p>
+    </div>
+
+    <!-- Error State -->
+    <div class="state-container error-card glass-card" *ngIf="error$ | async as errMsg">
+      <div class="error-icon">⚠</div>
+      <p class="error-title">Database Error</p>
+      <p class="state-text">{{ errMsg }}</p>
+    </div>
+
+    <!-- Course Cards Grid -->
+    <div class="courses-grid" *ngIf="!(loading$ | async) && !(error$ | async)">
+      <ng-container *ngIf="filteredCourses$ | async as courses">
+        <div class="empty-state glass-card" *ngIf="courses.length === 0">
+          <p class="empty-text">No courses match your filter criteria.</p>
+        </div>
+        
+        <div class="card-wrapper" *ngFor="let course of courses">
+          <!-- Course Card Component -->
+          <app-course-card 
+            [course]="course" 
+            (enrollRequested)="onEnrollNotification($event)">
+          </app-course-card>
+          
+          <!-- Quick link to Detail page -->
+          <div class="card-detail-link">
+            <a [routerLink]="['/courses', course.id]" class="detail-anchor" [id]="'lnk-detail-' + course.id">
+              Full Syllabus & Details →
+            </a>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+
+  <!-- Sidebar Panel -->
+  <div class="catalog-sidebar">
+    <app-course-summary-widget></app-course-summary-widget>
+  </div>
+</div>

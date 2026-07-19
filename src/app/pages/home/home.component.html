@@ -1,0 +1,92 @@
+<div class="dashboard-container">
+  <!-- Left Side: Main Dashboard -->
+  <div class="dashboard-main">
+    <!-- Welcome Card -->
+    <div class="welcome-card glass-card">
+      <div class="welcome-text">
+        <span class="welcome-tag">Student Dashboard</span>
+        <h2 class="welcome-title">Welcome back, {{ studentInfo.name }}!</h2>
+        <p class="welcome-subtitle">Major: {{ studentInfo.major }} • Academic Status: {{ studentInfo.status }}</p>
+      </div>
+      <div class="welcome-visual">
+        <svg class="dashboard-art" viewBox="0 0 120 120">
+          <defs>
+            <linearGradient id="cyan-purple" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="var(--accent-cyan)"/>
+              <stop offset="100%" stop-color="var(--accent-purple)"/>
+            </linearGradient>
+          </defs>
+          <circle cx="60" cy="60" r="50" fill="url(#cyan-purple)" opacity="0.15"/>
+          <polygon points="60,25 90,45 90,75 60,95 30,75 30,45" fill="none" stroke="url(#cyan-purple)" stroke-width="2"/>
+          <line x1="60" y1="25" x2="60" y2="95" stroke="url(#cyan-purple)" stroke-width="1.5" stroke-dasharray="2 2"/>
+          <line x1="30" y1="45" x2="90" y2="75" stroke="url(#cyan-purple)" stroke-width="1.5" stroke-dasharray="2 2"/>
+          <circle cx="60" cy="60" r="10" fill="url(#cyan-purple)"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Quick Stats Grid -->
+    <div class="stats-grid">
+      <div class="stat-card glass-card">
+        <span class="stat-label">Enrolled Courses</span>
+        <span class="stat-num" *ngIf="enrolledCourses$ | async as courses">{{ courses.length }}</span>
+      </div>
+      
+      <div class="stat-card glass-card border-purple">
+        <span class="stat-label">Registered Credits</span>
+        <span class="stat-num color-purple" *ngIf="totalCredits$ | async as credits">{{ credits }} / 18 Max</span>
+      </div>
+
+      <div class="stat-card glass-card border-pink">
+        <span class="stat-label">Academic Status</span>
+        <span class="stat-num color-pink">Good</span>
+      </div>
+    </div>
+
+    <!-- Navigation Shortcuts Section -->
+    <div class="shortcuts-section">
+      <h3 class="section-heading">Quick Actions</h3>
+      <div class="shortcuts-grid">
+        <a routerLink="/courses" class="shortcut-card glass-card" id="shortcut-courses">
+          <div class="shortcut-icon">📚</div>
+          <h4 class="shortcut-title">Explore Catalog</h4>
+          <p class="shortcut-desc">Browse through available technical and core course selections.</p>
+        </a>
+
+        <a routerLink="/profile" class="shortcut-card glass-card" id="shortcut-profile">
+          <div class="shortcut-icon">👤</div>
+          <h4 class="shortcut-title">Academic Profile</h4>
+          <p class="shortcut-desc">Check your grades, enrolled details, and credits tally.</p>
+        </a>
+
+        <!-- Only show if authenticated -->
+        <a routerLink="/enroll" class="shortcut-card glass-card" id="shortcut-enroll" *ngIf="isLoggedIn$ | async">
+          <div class="shortcut-icon">✏</div>
+          <h4 class="shortcut-title">Enroll Form</h4>
+          <p class="shortcut-desc">Fill out the semester enrollment sheet with reactive fields validation.</p>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right Side: Sidebar -->
+  <div class="dashboard-sidebar">
+    <!-- Course summary widget component -->
+    <app-course-summary-widget></app-course-summary-widget>
+
+    <!-- Scoped Notifications Panel -->
+    <div class="sidebar-notifications glass-card" *ngIf="notifications.length > 0">
+      <div class="sidebar-notif-header">
+        <h4 class="sidebar-notif-title">Dashboard Notifications</h4>
+        <span class="scoped-badge">Service ID #{{ notificationService.instanceId }}</span>
+      </div>
+      <ul class="sidebar-notif-list">
+        <li class="sidebar-notif-item" *ngFor="let notif of notifications">
+          <span class="bullet-glow"></span>
+          <span class="notif-text">{{ notif }}</span>
+        </li>
+      </ul>
+      <button class="btn-clear-sidebar" (click)="clearNotifications()">Clear All</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,107 @@
+/* Course Card Component Styles */
+
+.course-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: var(--bg-card);
+  border: var(--border-glass);
+  border-radius: var(--border-radius);
+  padding: 20px;
+  min-height: 180px;
+  transition: var(--transition-smooth);
+}
+
+.course-card:hover {
+  transform: translateY(-4px);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.course-code {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--accent-cyan);
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+}
+
+.course-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 4px;
+  color: var(--text-primary);
+}
+
+.course-credits {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.card-details-expanded {
+  padding-top: 12px;
+  margin-top: 8px;
+  border-top: var(--border-glass);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.card-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 16px;
+  gap: 8px;
+}
+
+.btn-sm {
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  border-radius: 6px;
+}
+
+/* Step 29: Conditional CSS Classes */
+.card--enrolled {
+  background: rgba(16, 185, 129, 0.08);
+  border-color: rgba(16, 185, 129, 0.3);
+}
+
+.card--full {
+  position: relative;
+}
+
+.card--full::after {
+  content: 'Intense';
+  position: absolute;
+  bottom: 8px;
+  right: 12px;
+  font-size: 0.65rem;
+  font-weight: 800;
+  color: var(--accent-purple);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.8;
+}
+
+.enrolled-btn {
+  border-color: var(--color-danger);
+  color: var(--color-danger);
+}
+
+.enrolled-btn:hover {
+  background: rgba(239, 68, 68, 0.1);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,82 @@
+<div class="detail-container">
+  <div class="back-navigation">
+    <a routerLink="/courses" class="btn-back">← Back to Catalog</a>
+  </div>
+
+  <!-- Loading State -->
+  <div class="state-container" *ngIf="loading">
+    <div class="spinner"></div>
+    <p class="state-text">Loading syllabus details...</p>
+  </div>
+
+  <!-- Error State -->
+  <div class="state-container error-card glass-card" *ngIf="!loading && errorMsg">
+    <div class="error-icon">⚠</div>
+    <p class="error-title">Course Error</p>
+    <p class="state-text">{{ errorMsg }}</p>
+  </div>
+
+  <!-- Content Card -->
+  <div class="detail-card glass-card" *ngIf="!loading && !errorMsg">
+    <div class="detail-header">
+      <div class="header-main">
+        <span class="course-code">{{ course.code }}</span>
+        <h2 class="course-title">{{ course.name }}</h2>
+        <p class="course-credits">{{ course.credits | creditLabel }}</p>
+      </div>
+
+      <div class="header-status">
+        <div [ngSwitch]="course.gradeStatus">
+          <span *ngSwitchCase="'passed'" class="badge badge-success">Passed</span>
+          <span *ngSwitchCase="'failed'" class="badge badge-danger">Failed</span>
+          <span *ngSwitchCase="'pending'" class="badge badge-warning">Pending</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="detail-body">
+      <!-- Description Section -->
+      <section class="detail-section">
+        <h3 class="section-title">Course Description</h3>
+        <p class="section-content">{{ getCourseDescription() }}</p>
+      </section>
+
+      <!-- Prerequisites -->
+      <section class="detail-section">
+        <h3 class="section-title">Prerequisites</h3>
+        <ul class="section-list">
+          <li class="list-item" *ngFor="let req of getCoursePrerequisites()">
+            ✔ {{ req }}
+          </li>
+        </ul>
+      </section>
+
+      <!-- Syllabus -->
+      <section class="detail-section">
+        <h3 class="section-title">Syllabus Outline</h3>
+        <ol class="section-list syllabus-list">
+          <li class="syllabus-item" *ngFor="let week of getSyllabusWeeks()">
+            {{ week }}
+          </li>
+        </ol>
+      </section>
+    </div>
+
+    <!-- Actions -->
+    <div class="detail-actions" *ngIf="isEnrolled$ | async as enrolled; else notEnrolledBtn">
+      <button class="btn-secondary enrolled-btn detail-action-btn" (click)="onToggleEnroll(true)" id="btn-detail-unenroll">
+        Unenroll from Course
+      </button>
+      <p class="enroll-status-text success-text">You are currently enrolled in this course.</p>
+    </div>
+    
+    <ng-template #notEnrolledBtn>
+      <div class="detail-actions">
+        <button class="btn-primary detail-action-btn" (click)="onToggleEnroll(false)" id="btn-detail-enroll">
+          Enroll in Course
+        </button>
+        <p class="enroll-status-text">Not enrolled. Secure your seat today.</p>
+      </div>
+    </ng-template>
+  </div>
+</div>

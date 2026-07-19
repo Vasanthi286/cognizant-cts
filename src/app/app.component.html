@@ -1,0 +1,10 @@
+<app-header></app-header>
+
+<main class="main-content container">
+  <router-outlet></router-outlet>
+</main>
+
+<div class="loading-overlay" *ngIf="isLoading$ | async">
+  <div class="spinner"></div>
+  <p class="spinner-text">Loading Portal Content...</p>
+</div>

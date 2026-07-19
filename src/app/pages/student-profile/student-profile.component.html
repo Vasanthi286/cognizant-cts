@@ -1,0 +1,100 @@
+<div class="profile-container">
+  <h1 class="heading-gradient">Student Profile</h1>
+
+  <div class="profile-layout">
+    <!-- Left Column: Student Details Card -->
+    <div class="student-card glass-card">
+      <div class="avatar-container">
+        <!-- SVG Avatar fallback if unsplash image is blocked/slow -->
+        <svg class="avatar-svg" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="48" fill="var(--bg-input)" stroke="var(--accent-cyan)" stroke-width="2"/>
+          <path d="M50 25a15 15 0 1 0 15 15 15 15 0 0 0-15-15zm-25 45a25 25 0 0 1 50 0z" fill="var(--text-secondary)"/>
+        </svg>
+      </div>
+
+      <div class="student-details">
+        <h2 class="student-name">{{ studentInfo.name }}</h2>
+        <span class="student-id">ID: {{ studentInfo.id }}</span>
+        
+        <div class="details-list">
+          <div class="details-item">
+            <span class="details-label">Major:</span>
+            <span class="details-value">{{ studentInfo.major }}</span>
+          </div>
+          <div class="details-item">
+            <span class="details-label">Email:</span>
+            <span class="details-value">{{ studentInfo.email }}</span>
+          </div>
+          <div class="details-item">
+            <span class="details-label">Status:</span>
+            <span class="badge badge-success">{{ studentInfo.academicStatus }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column: Registration Summary & Courses -->
+    <div class="registration-main">
+      <!-- Statistics Dashboard Row -->
+      <div class="stats-row">
+        <div class="stat-card glass-card">
+          <span class="stat-label">Registered Courses</span>
+          <span class="stat-num" *ngIf="enrolledCourses$ | async as courses">{{ courses.length }}</span>
+        </div>
+        <div class="stat-card glass-card border-purple">
+          <span class="stat-label">Term Total Credits</span>
+          <span class="stat-num color-purple" *ngIf="totalCredits$ | async as credits">{{ credits }}</span>
+        </div>
+      </div>
+
+      <!-- Enrolled Courses Catalog Grid -->
+      <div class="enrolled-courses-card glass-card">
+        <h3 class="courses-card-title">Enrolled Courses Registry</h3>
+
+        <ng-container *ngIf="enrolledCourses$ | async as courses">
+          <!-- Empty State -->
+          <div class="empty-enrolled" *ngIf="courses.length === 0">
+            <p class="empty-msg">You have not registered for any courses for this term.</p>
+            <a routerLink="/courses" class="btn-primary" id="btn-browse-catalog">Browse Catalog</a>
+          </div>
+
+          <!-- Courses Table List -->
+          <div class="courses-table-container" *ngIf="courses.length > 0">
+            <table class="courses-table">
+              <thead>
+                <tr>
+                  <th>Code</th>
+                  <th>Course Title</th>
+                  <th>Credits</th>
+                  <th>Status</th>
+                  <th class="actions-header">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let course of courses">
+                  <td class="col-code">{{ course.code }}</td>
+                  <td class="col-title">
+                    <a [routerLink]="['/courses', course.id]" class="course-link">{{ course.name }}</a>
+                  </td>
+                  <td class="col-credits">{{ course.credits | creditLabel }}</td>
+                  <td class="col-status">
+                    <div [ngSwitch]="course.gradeStatus">
+                      <span *ngSwitchCase="'passed'" class="badge badge-success">Passed</span>
+                      <span *ngSwitchCase="'failed'" class="badge badge-danger">Failed</span>
+                      <span *ngSwitchCase="'pending'" class="badge badge-warning">Pending</span>
+                    </div>
+                  </td>
+                  <td class="col-actions">
+                    <button class="btn-unenroll btn-sm" (click)="onUnenroll(course.id)" [id]="'btn-profile-unenroll-' + course.id">
+                      Unenroll
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>

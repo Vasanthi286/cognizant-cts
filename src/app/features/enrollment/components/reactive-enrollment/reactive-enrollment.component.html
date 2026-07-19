@@ -1,0 +1,88 @@
+<div class="enrollment-container">
+  <div class="enrollment-card glass-card">
+    <h2 class="form-title heading-gradient">Course Registration Sheet</h2>
+    <p class="form-subtitle">Complete the fields below to enroll in a course for the current academic semester.</p>
+
+    <form [formGroup]="enrollForm" (ngSubmit)="onSubmit()" class="enrollment-form">
+      <!-- Student Name -->
+      <div class="form-group">
+        <label class="form-label" for="studentName">Full Name</label>
+        <input 
+          id="studentName"
+          type="text" 
+          formControlName="studentName" 
+          class="form-control"
+          placeholder="Enter full name">
+        <div *ngIf="f['studentName'].touched && f['studentName'].errors" class="error-text">
+          <span *ngIf="f['studentName'].errors['required']">Full name is required.</span>
+          <span *ngIf="f['studentName'].errors['minlength']">Name must be at least 3 characters.</span>
+        </div>
+      </div>
+
+      <!-- Email Address -->
+      <div class="form-group">
+        <label class="form-label" for="studentEmail">Academic Email</label>
+        <input 
+          id="studentEmail"
+          type="email" 
+          formControlName="studentEmail" 
+          class="form-control"
+          placeholder="example@academy.edu">
+        <div *ngIf="f['studentEmail'].touched && f['studentEmail'].errors" class="error-text">
+          <span *ngIf="f['studentEmail'].errors['required']">Email is required.</span>
+          <span *ngIf="f['studentEmail'].errors['email']">Enter a valid email address.</span>
+        </div>
+      </div>
+
+      <!-- Course Selection Dropdown -->
+      <div class="form-group">
+        <label class="form-label" for="courseId">Select Course</label>
+        <select id="courseId" formControlName="courseId" class="form-control">
+          <option value="" disabled selected>-- Select a Course from Catalog --</option>
+          <option *ngFor="let course of courses$ | async" [value]="course.id">
+            {{ course.code }} - {{ course.name }} ({{ course.credits }} Credits)
+          </option>
+        </select>
+        <div *ngIf="f['courseId'].touched && f['courseId'].errors" class="error-text">
+          <span *ngIf="f['courseId'].errors['required']">Please select a course to register.</span>
+        </div>
+      </div>
+
+      <!-- Semester Select -->
+      <div class="form-group">
+        <label class="form-label" for="semester">Academic Term</label>
+        <select id="semester" formControlName="semester" class="form-control">
+          <option value="Fall 2026">Fall Semester 2026</option>
+          <option value="Spring 2027">Spring Semester 2027</option>
+          <option value="Summer 2027">Summer Semester 2027</option>
+        </select>
+        <div *ngIf="f['semester'].touched && f['semester'].errors" class="error-text">
+          <span *ngIf="f['semester'].errors['required']">Please select a term.</span>
+        </div>
+      </div>
+
+      <!-- Agreement Checkbox -->
+      <div class="form-group checkbox-group">
+        <label class="checkbox-container">
+          <input type="checkbox" formControlName="agreeTerms" id="agreeTerms">
+          <span class="checkmark"></span>
+          I certify that I meet all course prerequisites and agree to terms.
+        </label>
+        <div *ngIf="f['agreeTerms'].touched && f['agreeTerms'].errors" class="error-text">
+          <span *ngIf="f['agreeTerms'].errors['required']">You must accept the terms to enroll.</span>
+        </div>
+      </div>
+
+      <!-- Submit Action -->
+      <div class="form-actions">
+        <button 
+          type="submit" 
+          class="btn-primary form-submit-btn" 
+          [disabled]="enrollForm.invalid"
+          id="btn-submit-enrollment">
+          Submit Enrollment
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

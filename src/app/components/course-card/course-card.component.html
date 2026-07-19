@@ -1,0 +1,49 @@
+<div class="course-card glass-card" [ngClass]="cardClasses" [ngStyle]="{'border-left': '6px solid ' + leftBorderColor}">
+  <div class="card-header">
+    <span class="course-code">{{ course.code }}</span>
+    
+    <!-- Step 27: ngSwitch for gradeStatus badge -->
+    <div [ngSwitch]="course.gradeStatus">
+      <span *ngSwitchCase="'passed'" class="badge badge-success">Passed</span>
+      <span *ngSwitchCase="'failed'" class="badge badge-danger">Failed</span>
+      <span *ngSwitchCase="'pending'" class="badge badge-warning">Pending</span>
+      <span *ngSwitchDefault class="badge badge-secondary">Unknown</span>
+    </div>
+  </div>
+
+  <h3 class="course-title">{{ course.name }}</h3>
+  
+  <!-- Step 36: custom pipe creditLabel -->
+  <p class="course-credits">{{ course.credits | creditLabel }}</p>
+
+  <!-- Step 31: Show details expanded container -->
+  <div *ngIf="isExpanded" class="card-details-expanded">
+    <p><strong>Database ID:</strong> {{ course.id }}</p>
+    <p><strong>Description:</strong> Comprehensive curriculum covering essential concepts in {{ course.name }}.</p>
+    <p><strong>Department:</strong> Computer Science & Engineering</p>
+  </div>
+
+  <div class="card-actions">
+    <!-- Step 31: Toggle isExpanded on 'Show Details' button click -->
+    <button class="btn-secondary btn-sm" (click)="toggleExpand()" [id]="'btn-details-' + course.id">
+      {{ isExpanded ? 'Hide Details' : 'Show Details' }}
+    </button>
+
+    <!-- Step 65 & 100: Toggle Enroll / Unenroll -->
+    <button 
+      *ngIf="isEnrolled$ | async as enrolled; else notEnrolledTpl"
+      class="btn-secondary btn-sm enrolled-btn" 
+      (click)="onEnrollToggle(true)"
+      [id]="'btn-enroll-' + course.id]">
+      Unenroll
+    </button>
+    <ng-template #notEnrolledTpl>
+      <button 
+        class="btn-primary btn-sm" 
+        (click)="onEnrollToggle(false)"
+        [id]="'btn-enroll-' + course.id]">
+        Enroll
+      </button>
+    </ng-template>
+  </div>
+</div>
