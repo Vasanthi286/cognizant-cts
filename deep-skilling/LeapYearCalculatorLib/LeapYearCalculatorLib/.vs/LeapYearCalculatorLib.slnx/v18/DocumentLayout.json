@@ -1,0 +1,69 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\N-unit\\Parent project code\\Parent project code\\LeapYearCalculatorLib\\LeapYearCalculatorLib\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F2FCF69B-6547-4A18-9A6E-54D583E2ACB3}|..\\LeapYearCalculatorLib.Tests\\LeapYearCalculatorLib.Tests.csproj|c:\\n-unit\\parent project code\\parent project code\\leapyearcalculatorlib\\leapyearcalculatorlib.tests\\leapyearcalculatortests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2FCF69B-6547-4A18-9A6E-54D583E2ACB3}|..\\LeapYearCalculatorLib.Tests\\LeapYearCalculatorLib.Tests.csproj|c:\\n-unit\\parent project code\\parent project code\\leapyearcalculatorlib\\leapyearcalculatorlib.tests\\leapyearcalculatorlib.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7C1292C-EC17-45D2-8705-B9D78BD0421B}|LeapYearCalculatorLib.csproj|c:\\n-unit\\parent project code\\parent project code\\leapyearcalculatorlib\\leapyearcalculatorlib\\leapyearcalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7C1292C-EC17-45D2-8705-B9D78BD0421B}|LeapYearCalculatorLib.csproj|solutionrelative:leapyearcalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LeapYearCalculatorLib.Tests",
+              "DocumentMoniker": "C:\\N-unit\\Parent project code\\Parent project code\\LeapYearCalculatorLib\\LeapYearCalculatorLib.Tests\\LeapYearCalculatorLib.Tests.csproj",
+              "RelativeDocumentMoniker": "..\\LeapYearCalculatorLib.Tests\\LeapYearCalculatorLib.Tests.csproj",
+              "ToolTip": "C:\\N-unit\\Parent project code\\Parent project code\\LeapYearCalculatorLib\\LeapYearCalculatorLib.Tests\\LeapYearCalculatorLib.Tests.csproj",
+              "RelativeToolTip": "..\\LeapYearCalculatorLib.Tests\\LeapYearCalculatorLib.Tests.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-07-13T08:59:29.182Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LeapYearCalculator.cs",
+              "DocumentMoniker": "C:\\N-unit\\Parent project code\\Parent project code\\LeapYearCalculatorLib\\LeapYearCalculatorLib\\LeapYearCalculator.cs",
+              "RelativeDocumentMoniker": "LeapYearCalculator.cs",
+              "ToolTip": "C:\\N-unit\\Parent project code\\Parent project code\\LeapYearCalculatorLib\\LeapYearCalculatorLib\\LeapYearCalculator.cs",
+              "RelativeToolTip": "LeapYearCalculator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-13T09:01:26.085Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LeapYearCalculatorTests.cs",
+              "DocumentMoniker": "C:\\N-unit\\Parent project code\\Parent project code\\LeapYearCalculatorLib\\LeapYearCalculatorLib.Tests\\LeapYearCalculatorTests.cs",
+              "RelativeDocumentMoniker": "..\\LeapYearCalculatorLib.Tests\\LeapYearCalculatorTests.cs",
+              "ToolTip": "C:\\N-unit\\Parent project code\\Parent project code\\LeapYearCalculatorLib\\LeapYearCalculatorLib.Tests\\LeapYearCalculatorTests.cs",
+              "RelativeToolTip": "..\\LeapYearCalculatorLib.Tests\\LeapYearCalculatorTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-13T08:59:51.758Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

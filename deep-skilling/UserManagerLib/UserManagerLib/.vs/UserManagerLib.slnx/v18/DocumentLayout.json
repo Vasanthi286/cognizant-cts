@@ -1,0 +1,69 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\N-unit\\Parent project code\\Parent project code\\UserManagerLib\\UserManagerLib\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0CA7FD2C-329A-4DF7-A14C-65B048603CF2}|..\\UserManagerLib.Tests\\UserManagerLib.Tests.csproj|c:\\n-unit\\parent project code\\parent project code\\usermanagerlib\\usermanagerlib.tests\\usermanagertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{754C9AD0-F47F-4D37-A78A-1DC65E696D85}|UserManagerLib.csproj|c:\\n-unit\\parent project code\\parent project code\\usermanagerlib\\usermanagerlib\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{754C9AD0-F47F-4D37-A78A-1DC65E696D85}|UserManagerLib.csproj|solutionrelative:user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0CA7FD2C-329A-4DF7-A14C-65B048603CF2}|..\\UserManagerLib.Tests\\UserManagerLib.Tests.csproj|c:\\n-unit\\parent project code\\parent project code\\usermanagerlib\\usermanagerlib.tests\\usermanagerlib.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\N-unit\\Parent project code\\Parent project code\\UserManagerLib\\UserManagerLib\\User.cs",
+              "RelativeDocumentMoniker": "User.cs",
+              "ToolTip": "C:\\N-unit\\Parent project code\\Parent project code\\UserManagerLib\\UserManagerLib\\User.cs",
+              "RelativeToolTip": "User.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAIwCkAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-13T09:17:35.471Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserManagerLib.Tests",
+              "DocumentMoniker": "C:\\N-unit\\Parent project code\\Parent project code\\UserManagerLib\\UserManagerLib.Tests\\UserManagerLib.Tests.csproj",
+              "RelativeDocumentMoniker": "..\\UserManagerLib.Tests\\UserManagerLib.Tests.csproj",
+              "ToolTip": "C:\\N-unit\\Parent project code\\Parent project code\\UserManagerLib\\UserManagerLib.Tests\\UserManagerLib.Tests.csproj",
+              "RelativeToolTip": "..\\UserManagerLib.Tests\\UserManagerLib.Tests.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-07-13T09:16:42.317Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserManagerTests.cs",
+              "DocumentMoniker": "C:\\N-unit\\Parent project code\\Parent project code\\UserManagerLib\\UserManagerLib.Tests\\UserManagerTests.cs",
+              "RelativeDocumentMoniker": "..\\UserManagerLib.Tests\\UserManagerTests.cs",
+              "ToolTip": "C:\\N-unit\\Parent project code\\Parent project code\\UserManagerLib\\UserManagerLib.Tests\\UserManagerTests.cs",
+              "RelativeToolTip": "..\\UserManagerLib.Tests\\UserManagerTests.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAYwEEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-13T09:17:06.069Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

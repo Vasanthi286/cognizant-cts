@@ -1,0 +1,6 @@
+C:\N-unit\Parent project code\Parent project code\FourSeasonsLib\FourSeasonsLib\bin\Debug\SeasonsLib.dll
+C:\N-unit\Parent project code\Parent project code\FourSeasonsLib\FourSeasonsLib\bin\Debug\SeasonsLib.pdb
+C:\N-unit\Parent project code\Parent project code\FourSeasonsLib\FourSeasonsLib\obj\Debug\SeasonsLib.csproj.AssemblyReference.cache
+C:\N-unit\Parent project code\Parent project code\FourSeasonsLib\FourSeasonsLib\obj\Debug\SeasonsLib.csproj.CoreCompileInputs.cache
+C:\N-unit\Parent project code\Parent project code\FourSeasonsLib\FourSeasonsLib\obj\Debug\SeasonsLib.dll
+C:\N-unit\Parent project code\Parent project code\FourSeasonsLib\FourSeasonsLib\obj\Debug\SeasonsLib.pdb

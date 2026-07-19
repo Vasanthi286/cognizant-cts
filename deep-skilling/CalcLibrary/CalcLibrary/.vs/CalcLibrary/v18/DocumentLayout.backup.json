@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\N-unit\\Parent project code\\Parent project code\\CalcLibrary\\CalcLibrary\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{13C87B46-5914-45B4-86A4-95CAC368113F}|CalcLibrary.Tests\\CalcLibrary.Tests.csproj|c:\\n-unit\\parent project code\\parent project code\\calclibrary\\calclibrary\\calclibrary.tests\\calculatortests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{13C87B46-5914-45B4-86A4-95CAC368113F}|CalcLibrary.Tests\\CalcLibrary.Tests.csproj|solutionrelative:calclibrary.tests\\calculatortests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF9F0ABE-C280-4F84-8890-69F9E59BF84F}|CalcLibrary\\CalcLibrary.csproj|c:\\n-unit\\parent project code\\parent project code\\calclibrary\\calclibrary\\calclibrary\\mathlibrary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF9F0ABE-C280-4F84-8890-69F9E59BF84F}|CalcLibrary\\CalcLibrary.csproj|solutionrelative:calclibrary\\mathlibrary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13C87B46-5914-45B4-86A4-95CAC368113F}|CalcLibrary.Tests\\CalcLibrary.Tests.csproj|c:\\n-unit\\parent project code\\parent project code\\calclibrary\\calclibrary\\calclibrary.tests\\calclibrary.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{13C87B46-5914-45B4-86A4-95CAC368113F}|CalcLibrary.Tests\\CalcLibrary.Tests.csproj|solutionrelative:calclibrary.tests\\calclibrary.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MathLibrary.cs",
+              "DocumentMoniker": "C:\\N-unit\\Parent project code\\Parent project code\\CalcLibrary\\CalcLibrary\\CalcLibrary\\MathLibrary.cs",
+              "RelativeDocumentMoniker": "CalcLibrary\\MathLibrary.cs",
+              "ToolTip": "C:\\N-unit\\Parent project code\\Parent project code\\CalcLibrary\\CalcLibrary\\CalcLibrary\\MathLibrary.cs",
+              "RelativeToolTip": "CalcLibrary\\MathLibrary.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAiwDAAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-13T03:14:28.226Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CalcLibrary.Tests",
+              "DocumentMoniker": "C:\\N-unit\\Parent project code\\Parent project code\\CalcLibrary\\CalcLibrary\\CalcLibrary.Tests\\CalcLibrary.Tests.csproj",
+              "RelativeDocumentMoniker": "CalcLibrary.Tests\\CalcLibrary.Tests.csproj",
+              "ToolTip": "C:\\N-unit\\Parent project code\\Parent project code\\CalcLibrary\\CalcLibrary\\CalcLibrary.Tests\\CalcLibrary.Tests.csproj",
+              "RelativeToolTip": "CalcLibrary.Tests\\CalcLibrary.Tests.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-07-13T03:07:05.79Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CalculatorTests.cs",
+              "DocumentMoniker": "C:\\N-unit\\Parent project code\\Parent project code\\CalcLibrary\\CalcLibrary\\CalcLibrary.Tests\\CalculatorTests.cs",
+              "RelativeDocumentMoniker": "CalcLibrary.Tests\\CalculatorTests.cs",
+              "ToolTip": "C:\\N-unit\\Parent project code\\Parent project code\\CalcLibrary\\CalcLibrary\\CalcLibrary.Tests\\CalculatorTests.cs",
+              "RelativeToolTip": "CalcLibrary.Tests\\CalculatorTests.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAkwFIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-13T03:04:50.586Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

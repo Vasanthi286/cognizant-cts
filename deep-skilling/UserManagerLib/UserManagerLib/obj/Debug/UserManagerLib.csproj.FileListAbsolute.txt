@@ -1,0 +1,6 @@
+C:\N-unit\Parent project code\Parent project code\UserManagerLib\UserManagerLib\bin\Debug\UserManagerLib.dll
+C:\N-unit\Parent project code\Parent project code\UserManagerLib\UserManagerLib\bin\Debug\UserManagerLib.pdb
+C:\N-unit\Parent project code\Parent project code\UserManagerLib\UserManagerLib\obj\Debug\UserManagerLib.csproj.AssemblyReference.cache
+C:\N-unit\Parent project code\Parent project code\UserManagerLib\UserManagerLib\obj\Debug\UserManagerLib.csproj.CoreCompileInputs.cache
+C:\N-unit\Parent project code\Parent project code\UserManagerLib\UserManagerLib\obj\Debug\UserManagerLib.dll
+C:\N-unit\Parent project code\Parent project code\UserManagerLib\UserManagerLib\obj\Debug\UserManagerLib.pdb

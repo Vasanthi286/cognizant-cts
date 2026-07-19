@@ -1,0 +1,6 @@
+C:\N-unit\Parent project code\Parent project code\AccountsManagerLib\AccountsManagerLib\bin\Debug\AccountsManagerLib.dll
+C:\N-unit\Parent project code\Parent project code\AccountsManagerLib\AccountsManagerLib\bin\Debug\AccountsManagerLib.pdb
+C:\N-unit\Parent project code\Parent project code\AccountsManagerLib\AccountsManagerLib\obj\Debug\AccountsManagerLib.csproj.AssemblyReference.cache
+C:\N-unit\Parent project code\Parent project code\AccountsManagerLib\AccountsManagerLib\obj\Debug\AccountsManagerLib.csproj.CoreCompileInputs.cache
+C:\N-unit\Parent project code\Parent project code\AccountsManagerLib\AccountsManagerLib\obj\Debug\AccountsManagerLib.dll
+C:\N-unit\Parent project code\Parent project code\AccountsManagerLib\AccountsManagerLib\obj\Debug\AccountsManagerLib.pdb
