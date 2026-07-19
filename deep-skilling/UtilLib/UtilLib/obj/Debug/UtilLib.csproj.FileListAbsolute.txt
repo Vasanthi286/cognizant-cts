@@ -1,0 +1,6 @@
+C:\N-unit\Parent project code\Parent project code\UtilLib\UtilLib\bin\Debug\UtilLib.dll
+C:\N-unit\Parent project code\Parent project code\UtilLib\UtilLib\bin\Debug\UtilLib.pdb
+C:\N-unit\Parent project code\Parent project code\UtilLib\UtilLib\obj\Debug\UtilLib.csproj.AssemblyReference.cache
+C:\N-unit\Parent project code\Parent project code\UtilLib\UtilLib\obj\Debug\UtilLib.csproj.CoreCompileInputs.cache
+C:\N-unit\Parent project code\Parent project code\UtilLib\UtilLib\obj\Debug\UtilLib.dll
+C:\N-unit\Parent project code\Parent project code\UtilLib\UtilLib\obj\Debug\UtilLib.pdb

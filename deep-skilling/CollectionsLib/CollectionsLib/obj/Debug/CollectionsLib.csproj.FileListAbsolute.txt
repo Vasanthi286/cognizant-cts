@@ -1,0 +1,6 @@
+C:\N-unit\Parent project code\Parent project code\CollectionsLib\CollectionsLib\bin\Debug\CollectionsLib.dll
+C:\N-unit\Parent project code\Parent project code\CollectionsLib\CollectionsLib\bin\Debug\CollectionsLib.pdb
+C:\N-unit\Parent project code\Parent project code\CollectionsLib\CollectionsLib\obj\Debug\CollectionsLib.csproj.AssemblyReference.cache
+C:\N-unit\Parent project code\Parent project code\CollectionsLib\CollectionsLib\obj\Debug\CollectionsLib.csproj.CoreCompileInputs.cache
+C:\N-unit\Parent project code\Parent project code\CollectionsLib\CollectionsLib\obj\Debug\CollectionsLib.dll
+C:\N-unit\Parent project code\Parent project code\CollectionsLib\CollectionsLib\obj\Debug\CollectionsLib.pdb

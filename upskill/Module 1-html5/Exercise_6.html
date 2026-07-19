@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Feedback Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 500px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #007BFF;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0 15px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
+            border: none;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        img {
+            width: 200px;
+            height: 150px;
+            border: 2px solid black;
+            cursor: pointer;
+        }
+
+        #fee, #phoneMsg, #confirmMsg, #charCount {
+            font-weight: bold;
+            color: green;
+        }
+    </style>
+
+    <script>
+        function validatePhone() {
+            let phone = document.getElementById("phone").value;
+
+            if (phone.length != 10 || isNaN(phone)) {
+                document.getElementById("phoneMsg").innerHTML =
+                    "Enter a valid 10-digit phone number.";
+            } else {
+                document.getElementById("phoneMsg").innerHTML =
+                    "Valid Phone Number.";
+            }
+        }
+
+        function showFee() {
+            let event = document.getElementById("event").value;
+            let fee = "";
+
+            if (event == "Cultural Festival")
+                fee = "₹200";
+            else if (event == "Sports Meet")
+                fee = "₹150";
+            else if (event == "Health Camp")
+                fee = "₹100";
+
+            document.getElementById("fee").innerHTML =
+                "Event Fee: " + fee;
+        }
+
+        function confirmSubmit() {
+            document.getElementById("confirmMsg").innerHTML =
+                "Feedback Submitted Successfully!";
+        }
+
+        function enlargeImage(img) {
+            img.style.width = "350px";
+            img.style.height = "250px";
+        }
+
+        function countChars() {
+            let text = document.getElementById("feedback").value;
+
+            document.getElementById("charCount").innerHTML =
+                "Characters: " + text.length;
+        }
+    </script>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>Event Feedback Form</h2>
+
+    <label>Phone Number:</label>
+    <input type="text"
+           id="phone"
+           onblur="validatePhone()"
+           placeholder="Enter 10-digit phone number">
+
+    <p id="phoneMsg"></p>
+
+    <label>Select Event:</label>
+    <select id="event" onchange="showFee()">
+        <option value="">--Select Event--</option>
+        <option>Cultural Festival</option>
+        <option>Sports Meet</option>
+        <option>Health Camp</option>
+    </select>
+
+    <p id="fee"></p>
+
+    <label>Feedback:</label>
+    <textarea id="feedback"
+              rows="5"
+              onkeyup="countChars()"
+              placeholder="Enter your feedback"></textarea>
+
+    <p id="charCount">Characters: 0</p>
+
+    <label>Event Image (Double Click):</label><br>
+
+    <img src="event.jpg"
+         alt="Community Event"
+         ondblclick="enlargeImage(this)"
+         title="Double-click to enlarge">
+
+    <br><br>
+
+    <button type="button" onclick="confirmSubmit()">
+        Submit Feedback
+    </button>
+
+    <p id="confirmMsg"></p>
+
+</div>
+
+</body>
+</html>

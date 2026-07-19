@@ -1,0 +1,11 @@
+C:\Users\manep\OneDrive\Desktop\COGNIZANT\cognizant deepskilling\CustomerCommLib\bin\Debug\net8.0\CustomerCommLib.deps.json
+C:\Users\manep\OneDrive\Desktop\COGNIZANT\cognizant deepskilling\CustomerCommLib\bin\Debug\net8.0\CustomerCommLib.dll
+C:\Users\manep\OneDrive\Desktop\COGNIZANT\cognizant deepskilling\CustomerCommLib\bin\Debug\net8.0\CustomerCommLib.pdb
+C:\Users\manep\OneDrive\Desktop\COGNIZANT\cognizant deepskilling\CustomerCommLib\obj\Debug\net8.0\CustomerCommLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\manep\OneDrive\Desktop\COGNIZANT\cognizant deepskilling\CustomerCommLib\obj\Debug\net8.0\CustomerCommLib.AssemblyInfoInputs.cache
+C:\Users\manep\OneDrive\Desktop\COGNIZANT\cognizant deepskilling\CustomerCommLib\obj\Debug\net8.0\CustomerCommLib.AssemblyInfo.cs
+C:\Users\manep\OneDrive\Desktop\COGNIZANT\cognizant deepskilling\CustomerCommLib\obj\Debug\net8.0\CustomerCommLib.csproj.CoreCompileInputs.cache
+C:\Users\manep\OneDrive\Desktop\COGNIZANT\cognizant deepskilling\CustomerCommLib\obj\Debug\net8.0\CustomerCommLib.dll
+C:\Users\manep\OneDrive\Desktop\COGNIZANT\cognizant deepskilling\CustomerCommLib\obj\Debug\net8.0\refint\CustomerCommLib.dll
+C:\Users\manep\OneDrive\Desktop\COGNIZANT\cognizant deepskilling\CustomerCommLib\obj\Debug\net8.0\CustomerCommLib.pdb
+C:\Users\manep\OneDrive\Desktop\COGNIZANT\cognizant deepskilling\CustomerCommLib\obj\Debug\net8.0\ref\CustomerCommLib.dll

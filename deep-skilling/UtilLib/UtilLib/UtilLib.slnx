@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="../NUnit Test Project/UtilLib.Tests.csproj" />
+  <Project Path="UtilLib.csproj" />
+</Solution>
