@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Selecting Elements</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+</head>
+
+<body>
+
+    <h1>
+        Original Heading
+    </h1>
+
+    <p id="p1">
+        Paragraph One
+    </p>
+
+    <p id="p2">
+        Paragraph Two
+    </p>
+
+    <button>
+        Hide Paragraph
+    </button>
+
+    <script>
+
+        $(document).ready(function () {
+
+            $("h1").text(
+                "Updated Heading"
+            );
+
+            $("button").click(function () {
+
+                $("#p2").hide();
+
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>

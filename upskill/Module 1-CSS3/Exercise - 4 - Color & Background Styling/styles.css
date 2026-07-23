@@ -1,0 +1,80 @@
+/* Body Background */
+
+body {
+
+    background-color: #f0f0f0;
+
+    background-image: url("https://picsum.photos/1200/800");
+
+    background-size: cover;
+
+    background-position: center;
+
+    font-family: Arial, sans-serif;
+
+    margin: 0;
+}
+
+
+/* Gradient Header */
+
+header {
+
+    background: linear-gradient(
+        to right,
+        #007BFF,
+        #00C6FF
+    );
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+}
+
+
+/* Event Section */
+
+.event-section {
+
+    background-color: rgba(
+        255,
+        255,
+        255,
+        0.85
+    );
+
+    width: 70%;
+
+    margin: 40px auto;
+
+    padding: 25px;
+
+    border-radius: 10px;
+}
+
+
+/* HEX Color Example */
+
+h2 {
+
+    color: #003366;
+}
+
+
+/* RGBA Color Example */
+
+p {
+
+    color: rgba(
+        0,
+        0,
+        0,
+        0.8
+    );
+
+    font-size: 18px;
+
+    line-height: 1.6;
+}

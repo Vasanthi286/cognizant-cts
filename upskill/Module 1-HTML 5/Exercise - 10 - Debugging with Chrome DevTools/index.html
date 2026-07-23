@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debugging with Chrome DevTools</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+
+        .eventCard {
+            border: 2px solid blue;
+            padding: 15px;
+            width: 300px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Community Event Portal</h1>
+
+    <div class="eventCard">
+
+        <h2 id="eventName">
+            Tech Meetup
+        </h2>
+
+        <p id="availableSeats">
+            Available Seats: 50
+        </p>
+
+        <button onclick="registerUser()">
+            Register
+        </button>
+
+    </div>
+
+    <script>
+
+        let seats = 50;
+
+        console.log("Page Loaded Successfully");
+
+        function registerUser() {
+
+            console.log("Register button clicked");
+
+            console.log("Seats before registration:", seats);
+
+            seats--;
+
+            document.getElementById("availableSeats")
+                .innerHTML =
+                "Available Seats: " + seats;
+
+            console.log("Seats after registration:", seats);
+
+            if (seats <= 0) {
+
+                console.warn(
+                    "No seats available!"
+                );
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

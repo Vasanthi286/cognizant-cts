@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Debugging Example</title>
+</head>
+
+<body>
+
+    <h1>JavaScript Debugging</h1>
+
+    <button onclick="registerUser()">
+        Register
+    </button>
+
+    <script>
+
+        function registerUser() {
+
+            let seats = 50;
+
+            console.log(
+                "Registration Started"
+            );
+
+            console.log(
+                "Available Seats:",
+                seats
+            );
+
+            seats--;
+
+            console.log(
+                "Seats After Registration:",
+                seats
+            );
+
+            debugger;
+
+            console.log(
+                "Registration Completed"
+            );
+        }
+
+    </script>
+
+</body>
+
+</html>

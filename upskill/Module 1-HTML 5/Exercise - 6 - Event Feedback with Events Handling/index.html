@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Feedback</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 300px;
+            padding: 8px;
+            margin-bottom: 15px;
+        }
+
+        img {
+            width: 250px;
+            border: 3px solid blue;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button {
+            padding: 10px 15px;
+        }
+
+        #fee {
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Community Event Feedback</h1>
+
+    <!-- onblur -->
+
+    <label>Phone Number</label><br>
+
+    <input
+        type="text"
+        id="phone"
+        onblur="validatePhone()"
+        placeholder="Enter 10 digit number">
+
+    <p id="phoneMessage"></p>
+
+    <hr>
+
+    <!-- onchange -->
+
+    <label>Select Event</label><br>
+
+    <select id="eventSelect" onchange="showFee()">
+
+        <option value="">Choose Event</option>
+
+        <option value="500">
+            Tech Meetup
+        </option>
+
+        <option value="1000">
+            AI Workshop
+        </option>
+
+        <option value="1500">
+            Frontend Bootcamp
+        </option>
+
+    </select>
+
+    <p id="fee"></p>
+
+    <hr>
+
+    <!-- onclick -->
+
+    <button onclick="submitFeedback()">
+        Submit Feedback
+    </button>
+
+    <p id="submitMessage"></p>
+
+    <hr>
+
+    <!-- ondblclick -->
+
+    <h3>Double Click Image to Enlarge</h3>
+
+    <img
+        id="eventImage"
+        src="https://picsum.photos/250/150"
+        ondblclick="enlargeImage()">
+
+    <hr>
+
+    <!-- key event -->
+
+    <label>Feedback</label><br>
+
+    <textarea
+        id="feedback"
+        rows="5"
+        onkeyup="countCharacters()"
+        placeholder="Type your feedback">
+    </textarea>
+
+    <p>
+        Characters:
+        <span id="charCount">0</span>
+    </p>
+
+    <script>
+
+        function validatePhone() {
+
+            let phone =
+                document.getElementById("phone").value;
+
+            if (phone.length == 10) {
+
+                document.getElementById(
+                    "phoneMessage"
+                ).innerHTML =
+                    "Valid Phone Number";
+
+            } else {
+
+                document.getElementById(
+                    "phoneMessage"
+                ).innerHTML =
+                    "Phone Number must contain 10 digits";
+            }
+        }
+
+        function showFee() {
+
+            let fee =
+                document.getElementById(
+                    "eventSelect"
+                ).value;
+
+            document.getElementById(
+                "fee"
+            ).innerHTML =
+                "Event Fee: ₹" + fee;
+        }
+
+        function submitFeedback() {
+
+            document.getElementById(
+                "submitMessage"
+            ).innerHTML =
+                "Feedback Submitted Successfully!";
+        }
+
+        function enlargeImage() {
+
+            let image =
+                document.getElementById(
+                    "eventImage"
+                );
+
+            image.style.width = "500px";
+        }
+
+        function countCharacters() {
+
+            let text =
+                document.getElementById(
+                    "feedback"
+                ).value;
+
+            document.getElementById(
+                "charCount"
+            ).innerHTML =
+                text.length;
+        }
+
+    </script>
+
+</body>
+
+</html>

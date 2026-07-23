@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Browser Storage</title>
+</head>
+
+<body>
+
+    <h1>User Preferences</h1>
+
+    <input
+        type="text"
+        id="eventName"
+        placeholder="Enter Event Name">
+
+    <button onclick="saveData()">
+        Save
+    </button>
+
+    <button onclick="loadData()">
+        Load
+    </button>
+
+    <p id="result"></p>
+
+    <script>
+
+        function saveData() {
+
+            let eventName =
+                document
+                .getElementById(
+                    "eventName"
+                ).value;
+
+            localStorage.setItem(
+                "preferredEvent",
+                eventName
+            );
+
+            sessionStorage.setItem(
+                "currentEvent",
+                eventName
+            );
+
+            alert(
+                "Data Saved"
+            );
+        }
+
+        function loadData() {
+
+            let eventName =
+                localStorage.getItem(
+                    "preferredEvent"
+                );
+
+            document
+                .getElementById(
+                    "result"
+                ).innerHTML =
+                "Saved Event: " +
+                eventName;
+        }
+
+    </script>
+
+</body>
+
+</html>

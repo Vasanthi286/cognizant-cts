@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration Validation</title>
+</head>
+
+<body>
+
+    <h1>Community Event Registration</h1>
+
+    <label>Name:</label>
+    <input type="text" id="name">
+
+    <br><br>
+
+    <button onclick="validateForm()">
+        Register
+    </button>
+
+    <script>
+
+        function validateForm() {
+
+            let userName =
+                document.getElementById("name").value;
+
+            if (userName === "") {
+
+                alert("Please enter your name");
+
+            } else {
+
+                alert(
+                    "Registration Successful, " +
+                    userName
+                );
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

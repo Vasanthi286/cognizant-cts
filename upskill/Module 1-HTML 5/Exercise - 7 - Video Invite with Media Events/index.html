@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Event Promo Video</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        video {
+            border: 3px solid blue;
+            border-radius: 10px;
+        }
+
+        #message {
+            color: green;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Community Event Promo Video</h1>
+
+    <video
+        width="600"
+        controls
+        oncanplay="videoReady()">
+
+        <source
+            src="video/event-video.mp4"
+            type="video/mp4">
+
+        Your browser does not support video playback.
+
+    </video>
+
+    <p id="message"></p>
+
+    <script>
+
+        function videoReady() {
+
+            document.getElementById("message")
+                .innerHTML =
+                "Video ready to play!";
+        }
+
+        window.onbeforeunload = function () {
+
+            return "Are you sure you want to leave this page?";
+        };
+
+    </script>
+
+</body>
+
+</html>

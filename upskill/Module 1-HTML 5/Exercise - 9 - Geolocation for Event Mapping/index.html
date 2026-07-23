@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Nearby Events</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #location {
+            margin-top: 20px;
+            color: green;
+            font-weight: bold;
+        }
+
+        #error {
+            margin-top: 20px;
+            color: red;
+            font-weight: bold;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Find Nearby Events</h1>
+
+    <button onclick="findLocation()">
+        Find Nearby Events
+    </button>
+
+    <p id="location"></p>
+
+    <p id="error"></p>
+
+    <script>
+
+        function findLocation() {
+
+            if (navigator.geolocation) {
+
+                navigator.geolocation.getCurrentPosition(
+                    showPosition,
+                    showError,
+                    {
+                        enableHighAccuracy: true,
+                        timeout: 10000,
+                        maximumAge: 0
+                    }
+                );
+
+            } else {
+
+                document.getElementById("error")
+                    .innerHTML =
+                    "Geolocation is not supported by this browser.";
+            }
+        }
+
+        function showPosition(position) {
+
+            let latitude =
+                position.coords.latitude;
+
+            let longitude =
+                position.coords.longitude;
+
+            document.getElementById("location")
+                .innerHTML =
+                "Latitude: " + latitude +
+                "<br>Longitude: " + longitude;
+
+            document.getElementById("error")
+                .innerHTML = "";
+        }
+
+        function showError(error) {
+
+            let message = "";
+
+            switch (error.code) {
+
+                case error.PERMISSION_DENIED:
+                    message =
+                        "Location permission denied.";
+                    break;
+
+                case error.POSITION_UNAVAILABLE:
+                    message =
+                        "Location information unavailable.";
+                    break;
+
+                case error.TIMEOUT:
+                    message =
+                        "Location request timed out.";
+                    break;
+
+                default:
+                    message =
+                        "Unknown error occurred.";
+            }
+
+            document.getElementById("error")
+                .innerHTML = message;
+        }
+
+    </script>
+
+</body>
+
+</html>

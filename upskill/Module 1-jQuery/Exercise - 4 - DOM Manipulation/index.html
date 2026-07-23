@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>DOM Manipulation</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+</head>
+
+<body>
+
+<input
+type="text"
+id="item">
+
+<button id="addBtn">
+Add
+</button>
+
+<button id="removeBtn">
+Remove All
+</button>
+
+<ul id="list"></ul>
+
+<script>
+
+$("#addBtn").click(function () {
+
+    let value =
+        $("#item").val();
+
+    $("#list").append(
+        "<li>" +
+        value +
+        "</li>"
+    );
+
+    $("#item").val("");
+
+});
+
+$("#removeBtn").click(function () {
+
+    $("#list").empty();
+
+});
+
+</script>
+
+</body>
+
+</html>

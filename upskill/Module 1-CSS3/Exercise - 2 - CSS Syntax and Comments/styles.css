@@ -1,0 +1,62 @@
+/* ===================================
+   Header Styles
+   =================================== */
+
+h1 {
+
+    color: darkblue;
+
+    text-align: center;
+
+    font-family: Arial, sans-serif;
+}
+
+
+/* ===================================
+   Section Styles
+   =================================== */
+
+section {
+
+    width: 70%;
+
+    margin: auto;
+
+    padding: 20px;
+
+    border: 2px solid lightgray;
+}
+
+
+/* ===================================
+   Paragraph Styles
+   =================================== */
+
+p {
+
+    font-size: 18px;
+
+    color: #444;
+
+    line-height: 1.6;
+}
+
+
+/* ===================================
+   Main CTA Button
+   =================================== */
+
+.cta-button {
+
+    background-color: #007BFF;
+
+    color: white;
+
+    border: none;
+
+    padding: 10px 20px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+}

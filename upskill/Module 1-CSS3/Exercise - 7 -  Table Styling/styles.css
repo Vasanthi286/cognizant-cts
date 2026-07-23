@@ -1,0 +1,56 @@
+/* Page Styling */
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    margin: 30px;
+
+    text-align: center;
+}
+
+
+/* Table Styling */
+
+table {
+
+    width: 80%;
+
+    margin: auto;
+
+    border-collapse: collapse;
+}
+
+
+/* Header Styling */
+
+th {
+
+    background-color: navy;
+
+    color: white;
+
+    padding: 12px;
+
+    border: 1px solid black;
+}
+
+
+/* Table Data Styling */
+
+td {
+
+    padding: 12px;
+
+    border: 1px solid black;
+
+    text-align: center;
+}
+
+
+/* Zebra Striping */
+
+tr:nth-child(even) {
+
+    background-color: #f2f2f2;
+}

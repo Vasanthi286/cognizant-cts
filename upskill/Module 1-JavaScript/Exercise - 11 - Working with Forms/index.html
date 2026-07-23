@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form Validation</title>
+</head>
+
+<body>
+
+    <h1>Event Registration</h1>
+
+    <input
+        type="text"
+        id="userName"
+        placeholder="Enter Name">
+
+    <button onclick="validateForm()">
+        Submit
+    </button>
+
+    <p id="message"></p>
+
+    <script>
+
+        function validateForm() {
+
+            let name =
+                document
+                .getElementById(
+                    "userName"
+                ).value;
+
+            if (name === "") {
+
+                document
+                    .getElementById(
+                        "message"
+                    ).innerHTML =
+                    "Name is required";
+
+            } else {
+
+                document
+                    .getElementById(
+                        "message"
+                    ).innerHTML =
+                    "Registration Successful";
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
